@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Вы уверены, что хотите удалить "{{ object }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Да</button>
+        <a href="{% url 'index' %}">Нет</a>
+    </form>
+
+    <a href="{% url 'index' %}">Назад</a>
+</body>
+</html>

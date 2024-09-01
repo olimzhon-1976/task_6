@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Отчёт по продажам за указанный период</h1>
+{% if best_selling_product %}
+    <p>Самый продаваемый товар: {{ best_selling_product.product__name }}</p>
+    <p>Сумма продаж: {{ best_selling_product.total_sales }}</p>
+{% else %}
+    <p>Нет продаж за указанный период.</p>
+{% endif %}
+{% if best_seller %}
+    <p>Лучший продавец: {{ best_seller.seller__name }}</p>
+    <p>Сумма продаж: {{ best_seller.total_sales }}</p>
+{% else %}
+    <p>Нет продаж за указанный период.</p>
+{% endif %}
+{% if best_customer %}
+    <p>Лучший покупатель: {{ best_customer.customer__name }}</p>
+    <p>Сумма покупок: {{ best_customer.total_sales }}</p>
+{% else %}
+    <p>Нет покупок за указанный период.</p>
+{% endif %}
+
+
+<form method="GET" action="{% url 'sales_by_period' %}">
+    <label for="start_date">Дата начала:</label>
+    <input type="date" name="start_date" required>
+
+    <label for="end_date">Дата окончания:</label>
+    <input type="date" name="end_date" required>
+
+    <button type="submit">Показать отчёт</button>
+</form>
+
+</body>
+</html>

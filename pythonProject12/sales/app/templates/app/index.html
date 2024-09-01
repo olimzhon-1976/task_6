@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Добро пожаловать!</h1>
+
+<a href="{% url 'edit_customer' 2 %}">Редактирования ПОКУПАТЕЛЯ</a><br>
+<a href="{% url 'edit_seller' 1 %}">Редактирования ПРОДАВЦА</a><br>
+<a href="{% url 'edit_sale' 2 %}">Редактирования ПРОДАЖИ</a><br>
+<a href="{% url 'edit_product' 1 %}">Редактирования ПРОДУКТА</a><br>
+<a href="{% url 'sales_by_period' %}">Продажа определенный период</a><br>
+<a href="{% url 'best_selling_product' %}">Самый продаваемый продукт</a><br>
+<a href="{% url 'best_seller' %}">Самый лучший продавец</a><br>
+<a href="{% url 'best_customer' %}">Самый лучший покупатель</a><br>
+<a href="{% url 'report_sales_by_date' '2024-08-31' %}">Отчет о продаже по дате</a><br>
+<a href="{% url 'report_total_sales_by_date' '2024-08-31' %}">Отчет общей продаже по дате</a><br>
+<a href="{% url 'report_customers_by_seller' '2024-08-31' %}">Отчет покупателя с продавца</a><br>
+
+<a href="{% url 'delete_customer' 1 %}">Удаление ПОКУПАТЕЛЯ</a><br>
+<a href="{% url 'delete_seller' 1 %}">Удаление ПРОДАВЦА</a><br>
+<a href="{% url 'delete_sale' 1 %}">Удаление ПРОДАЖИ</a><br>
+<a href="{% url 'delete_product' 1 %}">Удаление ПРОДУКТА</a><br>
+
+
+</body>
+</html>
