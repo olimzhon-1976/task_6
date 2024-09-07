@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Продажи на {{  date }}</h1>
+    <ul>
+        {% for sale in sales %}
+            <li>{{ sale.product.name }} - {{ sale.amount }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Назад</a>
+</body>
+</html>

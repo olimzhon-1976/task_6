@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <h1>ПОКУПАТЕЛИ ПРОДАВЦА</h1>
+<!--   <form method="GET">-->
+<!--       <input type="text" name="q" placeholder="Поиск по имени" value="{{ query }}">-->
+<!--       <button type="submit">Поиск</button>-->
+<!--   </form>-->
+<!--    <h1>Покупатели продавца</h1>-->
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.name }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Назад</a>
+</body>
+</html>

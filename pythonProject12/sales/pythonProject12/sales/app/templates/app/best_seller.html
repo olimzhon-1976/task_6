@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Лучший продавец</h1>
+{% if seller %}
+    <p>Продавец: {{ seller.seller__name }}</p>
+    <p>Сумма продаж: {{ seller.total_sales }}</p>
+{% else %}
+    <p>Нет продаж.</p>
+{% endif %}
+
+<a href="{% url 'index' %}">Назад</a>
+</body>
+</html>
